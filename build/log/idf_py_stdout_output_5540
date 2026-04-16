@@ -1,0 +1,524 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1820
+load:0x403cc710,len:0xbcc
+load:0x403ce710,len:0x2f5c
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.3.3-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Apr  9 2026 11:52:29[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (34) boot: efuse block revision: v1.1[0m
+[0;32mI (38) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (43) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=26680h (157312) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=000366a8 vaddr=3fc95600 size=02e08h ( 11784) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=000394b8 vaddr=40380000 size=06b60h ( 27488) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b13b0h (725936) map[0m
+[0;32mI (261) esp_image: segment 4: paddr=000f13d8 vaddr=40386b60 size=0ea8ch ( 60044) load[0m
+[0;32mI (279) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (279) boot: Disabling RNG early entropy source...[0m
+[0;32mI (291) cpu_start: Unicore app[0m
+[0;32mI (299) cpu_start: Pro cpu start user code[0m
+[0;32mI (299) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (299) app_init: Application information:[0m
+[0;32mI (302) app_init: Project name:     health_monitor_mqtt[0m
+[0;32mI (308) app_init: App version:      df91301-dirty[0m
+[0;32mI (314) app_init: Compile time:     Apr  9 2026 11:49:53[0m
+[0;32mI (320) app_init: ELF file SHA256:  817c360ca...[0m
+[0;32mI (325) app_init: ESP-IDF:          v5.3.3-dirty[0m
+[0;32mI (330) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (335) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (340) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (345) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (352) heap_init: At 3FC9CEE0 len 00023120 (140 KiB): RAM[0m
+[0;32mI (358) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (365) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (372) heap_init: At 50000000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (379) spi_flash: detected chip: generic[0m
+[0;32mI (383) spi_flash: flash io: dio[0m
+[0;33mW (387) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (400) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (411) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (417) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (425) main_task: Started on CPU0[0m
+[0;32mI (425) main_task: Calling app_main()[0m
+[0;32mI (425) MAIN: === ESP32-C3 Health Monitor + MQTT ===[0m
+[0;32mI (455) pp: pp rom version: 9387209[0m
+[0;32mI (455) net80211: net80211 rom version: 9387209[0m
+[0;32mI (465) wifi:wifi driver task: 3fca65ec, prio:23, stack:6656, core=0[0m
+[0;32mI (465) wifi:wifi firmware version: b0b320f[0m
+[0;32mI (465) wifi:wifi certification version: v7.0[0m
+[0;32mI (465) wifi:config NVS flash: enabled[0m
+[0;32mI (465) wifi:config nano formating: disabled[0m
+[0;32mI (475) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (475) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (475) wifi:Init management short buffer num: 32[0m
+[0;32mI (485) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (485) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (495) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (495) wifi:Init static rx buffer num: 10[0m
+[0;32mI (505) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (505) wifi_init: rx ba win: 6[0m
+[0;32mI (505) wifi_init: accept mbox: 6[0m
+[0;32mI (515) wifi_init: tcpip mbox: 32[0m
+[0;32mI (515) wifi_init: udp mbox: 6[0m
+[0;32mI (515) wifi_init: tcp mbox: 6[0m
+[0;32mI (525) wifi_init: tcp tx win: 5760[0m
+[0;32mI (525) wifi_init: tcp rx win: 5760[0m
+[0;32mI (535) wifi_init: tcp mss: 1440[0m
+[0;32mI (535) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (545) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (545) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (555) phy_init: phy_version 1200,2b7123f9,Feb 18 2025,15:22:21[0m
+[0;32mI (595) wifi:mode : sta (84:f7:03:0a:92:9c)[0m
+[0;32mI (595) wifi:enable tsf[0m
+[0;32mI (605) MAIN: Dang ket noi WiFi: Viet ...[0m
+[0;32mI (605) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (605) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (625) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (635) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (685) wifi:connected with Viet, aid = 2, channel 6, BW20, bssid = 62:ba:00:7f:1b:3d[0m
+[0;32mI (685) wifi:security: WPA2-PSK, phy: bgn, rssi: -47[0m
+[0;32mI (685) wifi:pm start, type: 1[0m
+
+[0;32mI (685) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (695) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (785) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1705) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (1705) MAIN: WiFi OK — IP: 172.20.10.2[0m
+[0;32mI (1705) MAIN: MQTT client started -> mqtt://broker.hivemq.com:1883[0m
+[0;32mI (1715) HEALTH: Health Monitor started | BPM[50-120] SpO2>92%[0m
+[0;32mI (1715) wifi:<ba-add>idx:0 (ifx:0, 62:ba:00:7f:1b:3d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1725) main_task: Returned from app_main()[0m
+[0;32mI (2215) HEALTH: Dang do...[0m
+[0;32mI (2715) HEALTH: Dang do...[0m
+[0;32mI (3225) HEALTH: Dang do...[0m
+[0;32mI (3715) HEALTH: Dang do...[0m
+[0;32mI (4215) HEALTH: Dang do...[0m
+[0;32mI (4715) HEALTH: Dang do...[0m
+[0;32mI (5215) HEALTH: Dang do...[0m
+[0;32mI (5715) HEALTH: Dang do...[0m
+[0;32mI (6215) HEALTH: Dang do...[0m
+[0;32mI (6715) HEALTH: Dang do...[0m
+[0;32mI (7215) HEALTH: Dang do...[0m
+[0;32mI (7725) HEALTH: Dang do...[0m
+[0;32mI (8215) HEALTH: Dang do...[0m
+[0;32mI (8715) HEALTH: Dang do...[0m
+[0;32mI (9215) HEALTH: Dang do...[0m
+[0;32mI (9715) HEALTH: Dang do...[0m
+[0;32mI (10215) HEALTH: Dang do...[0m
+[0;32mI (10715) HEALTH: Dang do...[0m
+[0;32mI (11015) MAIN: MQTT connected[0m
+[0;32mI (11215) HEALTH: Dang do...[0m
+[0;32mI (11225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true,"ready":false}[0m
+[0;32mI (11315) MAIN: Topic: esp32/control  Data: ON[0m
+[0;32mI (11315) MAIN: Control: ON[0m
+[0;32mI (11635) MAIN: Topic: esp32/led  Data: false[0m
+[0;32mI (11715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (11725) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (11735) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (12215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (12235) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (12245) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (12715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (12745) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (12755) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (13215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (13255) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (13265) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (13715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (13765) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (13775) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (14215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (14225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (14275) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (14285) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (14715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (14785) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (14795) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (15215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (15295) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (15305) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (15715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (15805) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (15815) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (16215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (16315) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (16325) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (16715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (16825) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (16835) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (17215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (17225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (17335) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (17345) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (17715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (17845) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (17855) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (18215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (18355) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (18365) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (18715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (18865) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (18875) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (19215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (19375) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (19385) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (19715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (19885) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (19895) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (20215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (20225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (20395) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (20405) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (20715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (20905) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (20915) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (21215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (21415) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (21425) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (21715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (21925) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (21935) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (22215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (22435) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (22445) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (22715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (22945) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (22955) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (23215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (23225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (23455) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (23465) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (23715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (23965) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (23975) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (24215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (24475) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (24485) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (24715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (24985) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (24995) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (25215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (25495) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (25505) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (25715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (26005) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (26015) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (26215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (26225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (26515) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (26525) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (26715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (27025) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (27035) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (27215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (27535) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (27545) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (27715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (28045) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (28055) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (28215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (28555) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (28565) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (28715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (29065) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (29075) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (29165) MAIN: Topic: esp32/control  Data: hello from Flutter[0m
+[0;32mI (29165) MAIN: Control: hello from Flutter[0m
+[0;32mI (29215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (29225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (29575) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (29585) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (29715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (30085) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (30095) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (30215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (30595) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (30605) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (30715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (31105) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (31115) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (31215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (31615) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (31625) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (31715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (32125) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (32135) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (32215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (32225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (32635) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (32645) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (32715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (33145) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (33155) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (33215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (33655) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (33665) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (33715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (34165) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (34175) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (34215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (34675) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (34685) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (34715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (35185) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (35195) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (35215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (35225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (35695) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (35705) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (35715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (36205) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (36215) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (36215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (36715) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (36725) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (36725) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (37215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (37225) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (37235) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (37715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (37735) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (37745) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (38215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (38225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (38245) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (38255) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (38715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (38755) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (38765) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (39215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (39265) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (39275) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (39715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (39775) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (39785) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (40215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (40285) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (40295) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (40715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (40795) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (40805) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (41215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (41225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (41305) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (41315) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (41715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (41815) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (41825) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (42215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (42325) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (42335) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (42715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (42835) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (42845) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (43215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (43345) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (43355) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (43715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (43855) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (43865) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (44215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (44225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (44365) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (44375) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (44715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (44875) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (44885) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (45215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (45385) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (45395) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (45715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (45895) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (45905) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (46215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (46405) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (46415) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (46715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (46915) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (46925) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (47215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (47225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (47425) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (47435) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (47715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (47935) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (47945) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (48215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (48445) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (48455) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (48715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (48955) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (48965) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (49215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (49465) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (49475) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (49715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (49975) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (49985) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (50215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (50225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (50485) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (50495) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (50715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (50995) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (51005) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (51215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (51505) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (51515) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (51715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (52015) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (52025) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (52215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (52525) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (52535) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (52715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (53035) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (53045) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (53215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (53225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (53545) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (53555) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (53715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (54055) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (54065) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (54215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (54565) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (54575) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (54715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (55075) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (55085) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (55215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (55585) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (55595) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (55715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (56095) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (56105) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (56215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (56225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (56605) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (56615) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (56715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (57115) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (57125) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (57215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (57625) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (57635) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (57715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (58135) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (58145) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (58215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (58645) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (58655) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (58715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (59155) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (59165) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (59215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (59225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (59665) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (59675) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (59715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (60175) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (60185) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (60215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (60685) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (60695) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (60715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (61195) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (61205) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (61215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (61705) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (61715) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (61715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (62215) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (62225) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (62225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;32mI (62225) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (62715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (62725) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (62735) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (63215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (63235) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (63245) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (63715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (63745) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (63755) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (64215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (64255) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (64265) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (64715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (64765) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (64775) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (65215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (65225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (65275) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (65285) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (65715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (65785) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (65795) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (66215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (66295) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (66305) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (66715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (66805) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (66815) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (67215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (67315) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (67325) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (67715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (67825) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (67835) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (68215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (68225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (68335) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (68345) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (68715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (68845) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (68855) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (69215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (69355) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (69365) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (69715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (69865) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (69875) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (70215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (70375) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (70385) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (70715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (70885) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (70895) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (71215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (71225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (71395) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (71405) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (71715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (71905) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (71915) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (72215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (72415) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (72425) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (72715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (72925) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (72935) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (73215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (73435) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (73445) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (73715) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;33mW (73945) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (73955) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m
+[0;32mI (74215) HEALTH: BPM: 0 | SpO2: 0%[0m
+[0;32mI (74225) MAIN: Publish -> {"bpm":0,"spo2":0,"finger":true}[0m
+[0;33mW (74455) HEALTH: CANH BAO: Nhip tim bat thuong![0m
+[0;31mE (74465) HEALTH: KHAN CAP: SpO2 thap! Can dung xe![0m

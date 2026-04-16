@@ -1,0 +1,67 @@
+// {
+//     "configurations": [
+//         {
+//             "name": "ESP-IDF",
+//             "compilerPath": "${default}",
+//             "compileCommands": [
+//                 "${config:idf.buildPath}/compile_commands.json"
+//             ],
+//             "includePath": [
+//                 "${workspaceFolder}/**",
+//                 "D:/esp/Espressif/**",
+//                 "D:/esp/Espressif/esp-idf-v5.2.2/components/esp_timer/include/**",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/**",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/esp_timer/include",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/log/include",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/driver/include",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/freertos/include",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/freertos/FreeRTOS-Kernel/include",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/esp_common/include",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/esp_hw_support/include",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/soc/esp32c3/include",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/hal/include",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/hal/esp32c3/include",
+//                 "${workspaceFolder}/build/config",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/esp_wifi/include",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/json/cJSON",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/nvs_flash/include",
+//                 "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/lwip/include/apps",
+//                 // "D:/esp/Espressif/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/linux/include/freertos",
+//                 // "D:/esp/Espressif/esp-idf-v5.2.2/components/freertos/config/include",
+//                 // "D:/esp/Espressif/esp-idf-v5.2.2/components/esp_system/include"
+//             ],
+//             "browse": {
+//                 "path": [
+//                     "${config:idf.espIdfPath}/components",
+//                     "${config:idf.espIdfPathWin}/components",
+//                     "${workspaceFolder}"
+//                 ],
+//                 "limitSymbolsToIncludedHeaders": true
+//             }
+//         }
+//     ],
+//     "version": 4
+// }
+
+{
+  "configurations": [
+    {
+      "name": "ESP-IDF",
+      "compilerPath": "${default}",
+      "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/build/config",
+        "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components/**"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "D:/esp/Espressif/frameworks/esp-idf-v5.3.3/components"
+        ],
+        "limitSymbolsToIncludedHeaders": false
+      }
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,66 @@
+[0/1] Re-running CMake...
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32c3
+NOTICE: Skipping optional dependency: espressif/cjson
+NOTICE: Skipping optional dependency: espressif/usb_host_cdc_acm
+NOTICE: Skipping optional dependency: espressif/usb_host_cdc_acm
+NOTICE: Skipping optional dependency: espressif/usb_host_cdc_acm
+NOTICE: Skipping optional dependency: espressif/usb_host_cdc_acm
+NOTICE: Skipping optional dependency: espressif/usb_host_cdc_acm
+NOTICE: Skipping optional dependency: espressif/usb_host_cdc_acm
+NOTICE: Skipping optional dependency: espressif/usb_host_cdc_acm
+NOTICE: Skipping optional dependency: espressif/usb_host_ch34x_vcp
+NOTICE: Skipping optional dependency: espressif/usb_host_cp210x_vcp
+NOTICE: Skipping optional dependency: espressif/usb_host_cdc_acm
+NOTICE: Skipping optional dependency: espressif/usb_host_ch34x_vcp
+NOTICE: Skipping optional dependency: espressif/usb_host_cp210x_vcp
+NOTICE: Skipping optional dependency: espressif/usb_host_cdc_acm
+NOTICE: Skipping optional dependency: espressif/usb_host_ch34x_vcp
+NOTICE: Skipping optional dependency: espressif/usb_host_cp210x_vcp
+NOTICE: Skipping optional dependency: espressif/usb_host_cdc_acm
+NOTICE: Skipping optional dependency: espressif/usb_host_ch34x_vcp
+NOTICE: Skipping optional dependency: espressif/usb_host_cp210x_vcp
+NOTICE: Skipping optional dependency: espressif/mqtt
+NOTICE: Skipping optional dependency: espressif/mqtt
+NOTICE: Skipping optional dependency: espressif/cjson
+NOTICE: Skipping optional dependency: espressif/cjson
+NOTICE: Skipping optional dependency: espressif/cjson
+NOTICE: Skipping optional dependency: espressif/cjson
+NOTICE: Skipping optional dependency: espressif/cjson
+NOTICE: Skipping optional dependency: espressif/cjson
+NOTICE: Skipping optional dependency: espressif/cjson
+NOTICE: Skipping optional dependency: espressif/cjson
+NOTICE: Skipping optional dependency: espressif/cjson
+NOTICE: Skipping optional dependency: espressif/cjson
+NOTICE: Skipping optional dependency: espressif/mqtt
+NOTICE: Skipping optional dependency: espressif/mqtt
+NOTICE: Skipping optional dependency: espressif/mqtt
+NOTICE: Skipping optional dependency: espressif/mqtt
+NOTICE: Skipping optional dependency: espressif/mqtt
+NOTICE: Skipping optional dependency: espressif/mqtt
+NOTICE: 
+Following dependencies have new versions available:
+Dependency "espressif/esp_rainmaker": "1.8.7" -> "1.12.4"
+Dependency "espressif/esp_secure_cert_mgr": "2.7.2" -> "2.9.1"
+Dependency "espressif/mdns": "1.9.1" -> "1.11.0"
+Dependency "espressif/network_provisioning": "1.2.2" -> "1.2.4"
+Dependency "espressif/rmaker_common": "1.5.3" -> "1.8.0"
+Consider running "idf.py update-dependencies" to update your lock file.
+NOTICE: Processing 13 dependencies:
+NOTICE: [1/13] espressif/cbor (0.6.1~4)
+NOTICE: [2/13] espressif/esp_daylight (1.0.1)
+NOTICE: [3/13] espressif/esp_rainmaker (1.8.7)
+NOTICE: [4/13] espressif/esp_schedule (1.3.2)
+NOTICE: [5/13] espressif/esp_secure_cert_mgr (2.7.2)
+NOTICE: [6/13] espressif/jsmn (1.1.0)
+NOTICE: [7/13] espressif/json_generator (1.1.2)
+NOTICE: [8/13] espressif/json_parser (1.0.3)
+NOTICE: [9/13] espressif/led_strip (2.5.5)
+NOTICE: [10/13] espressif/mdns (1.9.1)
+NOTICE: [11/13] espressif/network_provisioning (1.2.2)
+NOTICE: [12/13] espressif/rmaker_common (1.5.3)
+NOTICE: [13/13] idf (5.3.3)
+NOTICE: Skipping optional dependency: espressif/cjson
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+D:\esp\Espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -SD:\esp\Espressif\frameworks\esp-idf-v5.3.3\RTOS_final -BD:\esp\Espressif\frameworks\esp-idf-v5.3.3\RTOS_final\build
