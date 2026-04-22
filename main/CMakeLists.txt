@@ -4,6 +4,7 @@ idf_component_register(
         "sensor.c"
         "oled.c"
         "health_monitor.c"
+        "can.c"
     INCLUDE_DIRS
         "."
     REQUIRES
